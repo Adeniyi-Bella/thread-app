@@ -1,34 +1,40 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Thread App
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- [Technologies Used](#technologies-used)
+- [Project Requirements to set up locally](#project-requirements-to-set-up-locally)
+- [Accounts needed for authentication](#accounts-needed-for-authentication)
+- [Running locally](#running-locally)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+- [Debugging](#Debugging)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
+- Project was bootstrapped with Next JS
+- clerk was used to manage user authentication
+- Tailwind with CSS was used for styling
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Requirements to set up locally
+- Node js ([Download here](https://nodejs.org/en/download))
+- run <node -v> and <npm -v> to test if download was successful.
+- Docker ([Download here](https://www.docker.com/products/docker-desktop/))
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Accounts needed for authentication
+- Clerk. Create an account ([here](https://clerk.com/))
 
-## Learn More
+## Running locally
 
-To learn more about Next.js, take a look at the following resources:
+- clone the repo with git clone 
+- cd into thread-app
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Usage
 
-## Deploy on Vercel
+## Folder Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Debugging
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
