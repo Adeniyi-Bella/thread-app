@@ -40,7 +40,7 @@ export default function RootLayout({
             {/* @ts-ignore */}
             <RightSidebar />
           </main>
-
+          {/* For mobile view */}
           <Bottombar />
         </body>
       </html>
