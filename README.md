@@ -29,6 +29,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 - clone the repo with git clone 
 - cd into thread-app
+- start the DB.
 
 
 ## Usage
