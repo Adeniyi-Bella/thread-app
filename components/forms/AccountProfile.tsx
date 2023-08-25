@@ -19,12 +19,13 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 
-// import { useUploadThing } from "@/lib/uploadthing";
+import { useUploadThing } from "@/lib/uploadthing";
 import { isBase64Image } from "@/lib/utils";
 
 import { UserValidation } from "@/lib/validations/user";
 import { updateUser } from "@/lib/actions/user.actions";
 
+//type definition for user details
 interface Props {
   user: {
     id: string;
@@ -40,7 +41,7 @@ interface Props {
 const AccountProfile = ({ user, btnTitle }: Props) => {
   const router = useRouter();
   const pathname = usePathname();
-//   const { startUpload } = useUploadThing("media");
+  const { startUpload } = useUploadThing("media");
 
   const [files, setFiles] = useState<File[]>([]);
 
@@ -82,6 +83,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
     }
   };
 
+  // function to upload image
   const handleImage = (
     e: ChangeEvent<HTMLInputElement>,
     fieldChange: (value: string) => void
@@ -107,15 +109,19 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
 
   return (
     <Form {...form}>
+
+      {/* onboarding form */}
       <form
         className='flex flex-col justify-start gap-10'
         onSubmit={form.handleSubmit(onSubmit)}
       >
+        {/* Formfield to add image */}
         <FormField
           control={form.control}
           name='profile_photo'
           render={({ field }) => (
             <FormItem className='flex items-center gap-4'>
+              {/* for image */}
               <FormLabel className='account-form_image-label'>
                 {field.value ? (
                   <Image
@@ -136,6 +142,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                   />
                 )}
               </FormLabel>
+              {/* validation to handle image */}
               <FormControl className='flex-1 text-base-semibold text-gray-200'>
                 <Input
                   type='file'
@@ -149,6 +156,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
           )}
         />
 
+        {/* name form field */}
         <FormField
           control={form.control}
           name='name'
